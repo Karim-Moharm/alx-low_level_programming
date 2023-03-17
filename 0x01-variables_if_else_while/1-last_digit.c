@@ -1,11 +1,13 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
- /**
-   * main - main func
-   *
-   * Return: 0 if sucess
-  */
+
+/**
+  * main - main func
+  *
+  * Description: compare last digit of random number with 5, 0 and 6
+  * Return: 0 if sucess
+*/
 
 int main(void)
 {
@@ -18,7 +20,7 @@ int main(void)
 
 	if (last_dig > 5)
 	{
-		printf("Last digit of %d is %d  and is greater than 5\n", n, last_dig);
+		printf("Last digit of %d is %d and is greater than 5\n", n, last_dig);
 	}
 	else if (last_dig == 0)
 	{
