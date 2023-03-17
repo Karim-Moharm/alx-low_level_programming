@@ -8,7 +8,7 @@
 
 int main(void)
 {
-	char char_num;
+	int char_num;
 
 	for (char_num = '0'; char_num <= '9'; char_num++)
 	{
