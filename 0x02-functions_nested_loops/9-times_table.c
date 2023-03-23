@@ -11,40 +11,24 @@ void times_table(void)
 	int R; /* row */
 	int C; /* coulmn*/
 	int P; /* product */
-	int n1;
-	int n2;
 
 	for (R = 0; R <= 9; R++)
 	{
-		for (C = 0; C <= 9; C++)
+		_putchar('0');
+		for (C = 1; C <= 9; C++)
 		{
+			_putchar(',');
+			_putchar(' ');
 			P = R * C;
-			if ((P / 10) == 0)
-			{
-				_putchar(P + '0');
 
-				if (C != 9)
-				{
-					_putchar(',');
-					_putchar(' ');
-					_putchar(' ');
-				}
+			if (P <= 9)
+			{
+				_putchar(' ');
 			}
 			else
-			{
-				n1 = P / 10;
-				n2 = P % 10;
-				_putchar(n1 + '0');
-				_putchar(n2 + '0');
-
-				if (C != 9)
-				{
-					_putchar(',');
-					_putchar(' ');
-				}
-			}
+				_putchar((P / 10) + '0');
+			_putchar((P % 10) + '0');
 		}
 		_putchar('\n');
 	}
-
 }
