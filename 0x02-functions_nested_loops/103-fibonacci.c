@@ -23,13 +23,13 @@ int main(void)
 long unsigned int fibonacci(void)
 {
 	int n;
-	int f1 = 1, f2 = 0;
-	int f;
+	long f1 = 1, f2 = 0;
+	long f;
 
 	for (n = 1; n <= 10; n++)
 	{
 		f = f1 + f2;
-		printf("%d, ", f);
-
+		printf("%ld, ", f);
 	}
+	return f;
 }
