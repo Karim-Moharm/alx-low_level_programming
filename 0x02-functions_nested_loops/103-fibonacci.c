@@ -29,6 +29,7 @@ long unsigned int fibonacci(void)
 	for (n = 1; n <= 10; n++)
 	{
 		f = f1 + f2;
+		printf("%d, ", f);
 
 	}
 }
