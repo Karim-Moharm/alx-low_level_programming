@@ -10,7 +10,7 @@ long unsigned int fibonacci(void);
 
 int main(void)
 {
-
+	fibonacci();
 	return (0);
 }
 
