@@ -6,8 +6,7 @@
   * @s2: second string
   * Return: integer number, the diffrence between two strings
   */
-
-int _strcmp(char *s1, char *s2)
+char *_strncat(char *dest, char *src, int n)
 {
 	while (*s1 != '\0' && *s2 != '\0')
 	{
