@@ -7,6 +7,4 @@
   */
 
 char *leet(char *s)
-{
-	
-}
+{}
