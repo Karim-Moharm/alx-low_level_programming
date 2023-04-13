@@ -9,7 +9,8 @@
 int _strlen(char *str)
 {
 	int len = 0;
-	while(len != '\0')
+
+	while (len != '\0')
 	{
 		len++;
 	}
@@ -28,7 +29,7 @@ char *str_concat(char *s1, char *s2)
 	char *ptr = NULL;
 	int len_s1 = 0, len_s2 = 0;
 	int i;
-	
+
 	/* if NULL is passed, treat it as an empty string */
 	if (s1 == NULL)
 		s1 = '\0';
@@ -43,17 +44,15 @@ char *str_concat(char *s1, char *s2)
 	/* The function should return NULL on failure */
 	if (ptr == NULL)
 		return (NULL);
-	else
+
+	for (i = 0; i < len_s1 + len_s2; i++)
 	{
-		for (i = 0; i < len_s1 + len_s2; i++)
-		{
-			if (i < len_s1) /* still in first string */
-				ptr[i] = s1[i];
-			else /* end of sring 1 */
-				ptr[i] = s2[i - len_s1];
-		}
-		ptr[i] = '\0';
-		return (ptr);
+		if (i < len_s1) /* still in first string */
+			ptr[i] = s1[i];
+		else /* end of sring 1 */
+			ptr[i] = s2[i - len_s1];
 	}
+	ptr[i] = '\0';
+	return (ptr);
 }
 
