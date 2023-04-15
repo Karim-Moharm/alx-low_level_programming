@@ -8,14 +8,10 @@
   */
 int _strlen(char *str)
 {
-	int i = 0;
 	int len = 0;
 
-	while(str[i] != '\0')
-	{
+	while (str[len] != '\0')
 		len++;
-		i++;
-	}
 	return (len);
 }
 
@@ -47,12 +43,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (str == NULL)
 		return (NULL);
 
-	for (; i < sizes1 + n; i++)
+	for (; i < (sizes1 + n); i++)
 	{
 		if (i < sizes1)
-		{
 			str[i] = s1[i];
-		}
 		else
 			str[i] = s2[i];
 	}
