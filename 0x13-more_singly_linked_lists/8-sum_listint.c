@@ -3,7 +3,7 @@
 /**
   * sum_listint - sum of all data in nodes
   * @head: head pointer
-  * return: sum of data in nodes and 0 if node is empty
+  * Return: sum of data in nodes and 0 if node is empty
   */
 
 int sum_listint(listint_t *head)
