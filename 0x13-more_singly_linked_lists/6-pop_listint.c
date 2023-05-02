@@ -3,7 +3,7 @@
 /**
   * pop_listint - delete the head node
   * @head: pointer to pointer
-  * return: the deleted node's data
+  * Return: the deleted node's data
   */
 
 int pop_listint(listint_t **head)
@@ -17,7 +17,7 @@ int pop_listint(listint_t **head)
 	data = (*head)->n;
 	*head = (*head)->next;
 	/* or *head = temp->next */
-	free (temp);
+	free(temp);
 	temp = NULL;
 
 	return (data);
