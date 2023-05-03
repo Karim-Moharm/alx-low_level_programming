@@ -29,10 +29,10 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		curr = curr->next;
 		index--;
 	}
-	/* when while is false, curr pointing to deleted node and prev 
-	   pointing to node before the deleted */
+	/* when while is false, curr pointing to deleted node and prev */
+	/*   pointing to node before the deleted */
 	prev->next = curr->next;
 	free(curr);
-	curr= NULL;
+	curr = NULL;
 	return (1);
 }
