@@ -2,7 +2,7 @@
 
 /**
   * get_endianness eck if little endian or big endian
-  * Description: if last bit (MSB) is 0 it will be big endian 
+  * Description: if last bit (MSB) is 0 it will be big endian
   * else will be little endian
   * Return: 0 if big endian, 1 if little endian
   */
