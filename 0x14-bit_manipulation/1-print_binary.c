@@ -6,17 +6,16 @@
   * Return: void
   */
 
-void print_binary(unsigned long int n) 
+void print_binary(unsigned long int n)
 {
-	int max = sizeof(unsigned long int) * 8 - 1;
+	int max = sizeof(unsigned long int) * 8;
 	int bit;
 	int i;
 
-	for (i = 0; i <= max; i++) 
+	for (i = 0; i < max; i++)
 	{
 		bit = (n >> max) & 1;
 		_putchar(bit ? '1' : '0');
 		n <<= 1;
-    }
+	}
 }
-
