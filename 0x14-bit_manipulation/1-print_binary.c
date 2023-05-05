@@ -12,6 +12,12 @@ void print_binary(unsigned long int n)
 	int bit;
 	int i;
 
+	if (n == 0)
+	{
+		_putchar('0');
+		return;
+	}
+
 	for (i = 0; i < max; i++)
 	{
 		bit = (n >> max) & 1;
