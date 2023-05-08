@@ -21,24 +21,29 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 
 	fd = open(filename, O_RDONLY);
-	if (fd != 0)
+	if (fd == -1)
 		return (0);
-
 	buffer = malloc(sizeof(char) * letters);
-	if (buffer == NULL)
-		return (0);
 
+	if (NULL == buffer)
+		return (0);
 	count = read(fd, buffer, letters);
 
-	fd_write = open(filename, O_WRONLY);
-	if (fd_write != 0)
+	if (count != 0)
+	{
+		free (buffer);
 		return (0);
+	}
 
-	write(fd_write, buffer, letters);
+	write_ret = write(1, buffer, count);
+	if (write_ret != 0)
+	{
+		free (buffer);
+		return (0);
+	}
 
+	close(fd);
 	free(buffer);
-
-
 	return (count);
 }
 
