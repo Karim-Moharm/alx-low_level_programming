@@ -6,10 +6,10 @@
   * @letters: number of letters it should read and print
   * Return:  the actual number of letters it could read and print
   * if file cannot be opend return 0
-  * if filename is NULL return 
+  * if filename is NULL return
   * if write fails or does not write the expected amount of bytes, return 0
   */
-  
+
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fd; /* file descriptor */
@@ -26,9 +26,9 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	buffer = malloc(sizeof(char) * letters);
 
-	if (NULL == buffer)
+	if (buffer == NULL)
 		return (0);
-	
+
 	count = read(fd, buffer, letters);
 	if (count != 0)
 	{
@@ -36,10 +36,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 
-	write_ret = write(1, buffer, count);
+	write_ret = write(STDOUT_FILENO, buffer, count);
 	if (write_ret != 0)
 	{
-		free (buffer);
+		free(buffer);
 		return (0);
 	}
 
