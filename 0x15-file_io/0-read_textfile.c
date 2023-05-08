@@ -14,6 +14,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fd; /* file descriptor */
 	char *buffer = NULL;
+	int count = 0;
+	int fd_write;
 
 	if (filename == NULL)
 		return (0);
@@ -27,6 +29,15 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 
 	count = read(fd, buffer, letters);
+
+	fd_write = open(filename, O_WRONLY);
+	if (fd_write != 0)
+		return (0);
+
+	write(fd_write, buffer, letters);
+
+	free(buffer);
+
 
 	return (count);
 }
