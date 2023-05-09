@@ -12,10 +12,7 @@
 
 int main(int argc, char **argv)
 {
-	int fd_from, fd_to;
-	int close_from_ret;
-	int close_to_ret;
-	int count;
+	int fd_from, fd_to, close_from_ret, close_to_ret, count;
 	char buffer[1024];
 
 	if (argc != 3)
