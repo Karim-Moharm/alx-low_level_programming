@@ -40,7 +40,7 @@ int main(int argc, char **argv)
 		exit(99);
 	}
 
-	count = read(fd_from, buffer, 1024);
+/*	count = read(fd_from, buffer, 1024); */
 
 	close_from_ret = close(fd_from);
 	close_to_ret = close(fd_to);
