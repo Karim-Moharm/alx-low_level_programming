@@ -16,7 +16,7 @@ int main(int argc, char **argv)
 	int close_from_ret;
 	int close_to_ret;
 	int count;
-	char *buffer[1024];
+	char buffer[1024];
 
 	if (argc != 3)
 	{
