@@ -1,7 +1,7 @@
-#include "main.h"
 #include <stdio.h>
 #include <unistd.h>
 #include <fcntl.h>
+#include <stdlib.h>
 
 /**
   * main - program that copies the content of a file to another file
@@ -21,7 +21,5 @@ int main(int ac, char **av)
 	}
 	fd_from = open("file_from", O_RDONLY);
 	fd_to = open("file_to", O_WRONLY | O_CREAT | O_TRUNC, 0664);
-
-
 
 }
