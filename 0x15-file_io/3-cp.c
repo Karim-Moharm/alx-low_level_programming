@@ -17,7 +17,7 @@ int main(int argc, char **argv)
 /*	int close_to_ret; */
 /*	int count; */
 
-	char *buffer = malloc(sizeof(char) * 1024);
+/*	char *buffer = malloc(sizeof(char) * 1024); */
 
 	if (argc != 3)
 	{
