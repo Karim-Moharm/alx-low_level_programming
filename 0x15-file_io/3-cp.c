@@ -39,9 +39,9 @@ int main(int argc, char **argv)
 		exit(99);
 	}
 
-	while (count = read(fd_from, buffer, 1024))
+	while (count = read(fd_from, buffer, 1024) != 0)
 	{
-		write(fd_to, buffer, 1024);
+		write(fd_to, buffer, count);
 	}
 
 	close_from_ret = close(fd_from);
@@ -49,10 +49,9 @@ int main(int argc, char **argv)
 
 	if (close_from_ret == -1 || close_to_ret == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd FD_VALUE");
+		dprintf(STDERR_FILENO, "Error: Can't close fd %s\n", argv[1]);
 		exit(100);
 	}
-
 
 	return (0);
 }
