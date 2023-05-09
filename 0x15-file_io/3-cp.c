@@ -45,11 +45,11 @@ int main(int argc, char **argv)
 	close_from_ret = close(fd_from);
 	close_to_ret = close(fd_to);
 
-	if (close_from_ret == -1 || close_to_ret == -1)
+/*	if (close_from_ret == -1 || close_to_ret == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd FD_VALUE");
 		exit(100);
-	}
+	} */
 
 	return (0);
 }
