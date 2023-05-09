@@ -39,7 +39,7 @@ int main(int argc, char **argv)
 		exit(99);
 	}
 
-	while (count = read(fd_from, buffer, 1024) != 0)
+	while ((count = read(fd_from, buffer, 1024)) != 0)
 	{
 		write(fd_to, buffer, count);
 	}
