@@ -14,18 +14,22 @@ int append_text_to_file(const char *filename, char *text_content)
 
 	if (filename == NULL)
 		return (-1);
-	if (text_content == NULL)
-		return (1);
+
 
 	fd = open(filename, O_APPEND | O_CREAT);
 	if (fd == -1)
 		return (-1);
+	
+	if (text_content == NULL)
+		return (1);
+
 	while (text_content && *(text_content + len))
 		len++;
 
 	write_ret = write(fd, filename, len);
 	if (write_ret < 0)
 		return (-1);
+	
 	close (fd);
 
 	return (1);
