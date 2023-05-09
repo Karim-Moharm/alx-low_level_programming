@@ -23,17 +23,14 @@ int append_text_to_file(const char *filename, char *text_content)
 	if (text_content == NULL)
 		return (1);
 
-	while (text_content && *(text_content + len))
+	while (*(text_content + len))
 		len++;
 
-	write_ret = write(fd, filename, len);
+	write_ret = write(fd, text_content, len);
 	if (write_ret < 0)
 		return (-1);
 	
 	close (fd);
-
 	return (1);
-
-
 }
 
