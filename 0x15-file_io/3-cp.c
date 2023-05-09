@@ -19,9 +19,6 @@ int main(int argc, char **argv)
 
 	char *buffer = malloc(sizeof(char) * 1024);
 
-	if (buffer == NULL)
-		return (0);
-
 	if (argc != 3)
 	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to");
