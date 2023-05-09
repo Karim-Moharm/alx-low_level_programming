@@ -16,12 +16,10 @@ int main(int argc, char **argv)
 	int close_from_ret;
 	int close_to_ret;
 	int count;
-
-	char *buffer = malloc(sizeof(char) * 1024);
+	char *buffer[1024];
 
 	if (argc != 3)
 	{
-		free(buffer);
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to");
 		exit(97);
 	}
@@ -31,14 +29,12 @@ int main(int argc, char **argv)
 
 	if (fd_from == -1)
 	{
-		free(buffer);
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
 
 	if (fd_to == -1)
 	{
-		free(buffer);
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
@@ -53,12 +49,10 @@ int main(int argc, char **argv)
 
 	if (close_from_ret == -1 || close_to_ret == -1)
 	{
-		free(buffer);
 		dprintf(STDERR_FILENO, "Error: Can't close fd FD_VALUE");
 		exit(100);
 	}
 
-	free(buffer);
 
 	return (0);
 }
