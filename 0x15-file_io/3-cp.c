@@ -13,9 +13,9 @@
 int main(int argc, char **argv)
 {
 	int fd_from, fd_to;
-	int close_from_ret;
-	int close_to_ret;
-	int count;
+/*	int close_from_ret;*/
+/*	int close_to_ret; */
+/*	int count; */
 
 	char *buffer = malloc(sizeof(char) * 1024);
 
@@ -39,16 +39,16 @@ int main(int argc, char **argv)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
-
-/*	count = read(fd_from, buffer, 1024); */
-
-	close_from_ret = close(fd_from);
-	close_to_ret = close(fd_to);
-
-/*	if (close_from_ret == -1 || close_to_ret == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd FD_VALUE");
-		exit(100);
+/**
+*	count = read(fd_from, buffer, 1024); 
+*
+*	close_from_ret = close(fd_from);
+*	close_to_ret = close(fd_to);
+*
+*	if (close_from_ret == -1 || close_to_ret == -1)
+*	{
+*		dprintf(STDERR_FILENO, "Error: Can't close fd FD_VALUE");
+*		exit(100);
 	} */
 
 	return (0);
