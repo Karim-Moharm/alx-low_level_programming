@@ -6,6 +6,7 @@
  * add_dnodeint_end - add node at the end
  * @head: head pointer, points to first node
  * @n: data
+ * Return: address of newNode of null if failed
  */
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
@@ -21,8 +22,8 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 	newNode->prev = NULL;
 	newNode->n = n;
 	newNode->next = NULL;
-	
-	if(!head || !(*head))
+
+	if (!head || !(*head))
 	{
 		*head = newNode;
 		return (newNode);
@@ -31,7 +32,7 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 	temp = *head;
 	while (temp->next != NULL)
 		temp = temp->next;
-	
+
 	temp->next = newNode;
 	newNode->prev = temp;
 	return (newNode);
