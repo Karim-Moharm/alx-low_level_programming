@@ -21,9 +21,8 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 
 	if (index >= list_len)
 		return (NULL);
-	
 	temp = head;
-	while(index != 0)
+	while (index != 0)
 	{
 		temp = temp->next;
 		index--;
