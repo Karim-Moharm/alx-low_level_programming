@@ -19,8 +19,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	unsigned long int index = 0;
 	hash_node_t *ht_curr_node = NULL;
 
-	index = key_index(key, ht->size)
-	if (key == NULL || ht == NULL || strlen(key) == 0 || index < 0)
+	index = key_index((unsigned char *)key, ht->size);
+	if (key == NULL || ht == NULL || strlen(key) == 00)
 		return (0);
 	ht_curr_node = ht->array[index];
 
