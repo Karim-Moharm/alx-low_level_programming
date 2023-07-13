@@ -24,10 +24,10 @@ void hash_table_print(const hash_table_t *ht)
 					printf(", ");
 
 				ht_node = ht->array[i];
-				while(ht_node)
+				while (ht_node)
 				{
-					printf("{'%s': '%s'}", 
-							ht_node->key, ht_node->value);
+					printf("{'%s': '%s'}",
+							 ht_node->key, ht_node->value);
 					ht_node = ht_node->next;
 					if (ht_node)
 						printf(", ");
