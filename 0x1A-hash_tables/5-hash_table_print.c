@@ -13,8 +13,11 @@ void hash_table_print(const hash_table_t *ht)
 	char flag = 0;
 
 	if (!ht)
+	{
 		printf("{}\n");
-	else
+		return;
+	}
+	if (ht)
 	{
 		while (i < ht->size)
 		{
