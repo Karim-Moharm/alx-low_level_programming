@@ -1,8 +1,8 @@
-CC := gcc
-SRC := $(wildcard *.c)
-OBJ := main.o school.o
-NAME := school
-RM := rm
+CC = gcc
+SRC = wildcard *.c
+OBJ = main.o school.o
+NAME = school
+RM = rm
 
 all: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
