@@ -22,7 +22,7 @@ def island_perimeter(grid):
 
                 if r > 0 and grid[r - 1][c] == 1:
                     one_found += 1
-                if c >  0 and grid[r][c - 1] == 1:
+                if c > 0 and grid[r][c - 1] == 1:
                     one_found += 1
 
     return perimeter - (2 * one_found)
