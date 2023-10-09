@@ -42,7 +42,7 @@ int binary_search(int *array, size_t size, int value)
 	{
 		while (left_idx <= right_idx)
 		{
-			printf("Searching in array:");
+			printf("Searching in array: ");
 			print_arr(array, left_idx, right_idx);
 
 			mid_idx = left_idx + ((right_idx - left_idx) / 2);
